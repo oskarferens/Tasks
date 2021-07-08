@@ -1,21 +1,22 @@
 call runcrud.bat
-if "%ERRORLEVEL%" == "0" goto runwebbrowser
+goto runbrowser
 echo.
-echo runcrud errors
+echo RUNCRUD.BAT has errors - breaking work
 goto fail
 
-:runwebbrowser
-timeout 10
-start chrome http://localhost:8080/crud/v1/task/getTasks
+:runbrowser
+echo.
+echo run browser
+start chrome "http://localhost:8080/crud/v1/task/getTasks"
 if "%ERRORLEVEL%" == "0" goto end
 echo.
-echo There were errors in opening brave
+echo RUN CHROME has errors - breaking work
 goto fail
 
 :fail
 echo.
-echo There were errors in showtasks.bat
+echo showtasks.bat - There were errors
 
 :end
 echo.
-echo Showtasks work is finished
+echo showtasks.bat - Work is finished.

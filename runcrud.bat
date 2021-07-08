@@ -31,6 +31,3 @@ echo There were errors
 :end
 echo.
 echo Work is finished.
-
-@http://localhost:8080/tasks-0.0.1-SNAPSHOT/v1/task/getTasks
-@http://localhost:8080/crud.war/v1/task/getTasks

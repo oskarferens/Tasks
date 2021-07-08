@@ -7,7 +7,7 @@ goto fail
 :runbrowser
 echo.
 echo run browser
-start chrome "http://localhost:8080/crud/v1/task/getTasks"
+start chrome http://localhost:8080/crud/v1/task/getTasks
 if "%ERRORLEVEL%" == "0" goto end
 echo.
 echo RUN CHROME has errors - breaking work
